@@ -1,7 +1,7 @@
 jungol = ['J', 'U', 'N', 'G', 'O', 'L']
-
 text = input()
 
-for i in jungol:
-    if text == i:
-        print()
+if text in jungol:
+    print(jungol.index(text))
+else:
+    print("none")
