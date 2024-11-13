@@ -4,8 +4,8 @@ result = []
 while len(word) < 5:
     word.append(input().strip())
 
-text = input()
-string = input()
+text = input().strip()
+string = input().strip()
 
 for i in word:
     if text in i or string in i:
