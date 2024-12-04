@@ -1,25 +1,22 @@
 import math
 
-def sqrt(a, b):
-    num = 0
-    a = math.sqrt(a)
-    b = math.sqrt(b)
+def cal(num):
+    count = 0
+    result = []
+    for i in num:
+        result.append(math.sqrt(i))
 
-    if a <= b:
-        max_ = b
-        min_ = a
-    else:
-        max_ = a
-        min_ = b
+    if result[0] < result[1]:
+        result[0], result[1] = result[1], result[0]
 
-    min_ = math.ceil(min_)
-    max_ = math.floor(max_)
+    result[0] = math.floor(result[0])
+    result[1] = math.ceil(result[1])
 
-    while min_ <= max_:
-        min_ += 1
-        num += 1
+    while result[1] <= result[0]:
+        result[1] += 1
+        count += 1
 
-    print(num)
+    print(count)
 
-x, y = map(float, input().split())
-sqrt(x, y)
+num = list(map(float, input().split()))
+cal(num)
